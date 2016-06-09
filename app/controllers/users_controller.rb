@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @profile = @user.profile
+    @users = User.all
   end
 
   def create

@@ -1,17 +1,18 @@
 <h1>Dashboard</h1>
-<p>See what's happening in your network!</p>
-<hr>
-<h3>Hey! Why not fill out a profile and connect with other students?</h3>
- <%= link_to "Set up profile", new_profile_path %>
-<hr>
 
-<% @users.each do |user| %>
-<div>
-  <p>Username: <%=user.username%> joined <%= time_ago_in_words(user.created_at) + ' ago'%></p>
-  <p>Bio: <%= user.profile.bio %></p>
-  <p><%= link_to "View User", profile_path(user) %></p>
-
+<% if signed_in? && @user.profile.bio %>
+  <h3></h3>
+  <p>Hey <%= @user.username %>, he who is afraid of asking is ashamed of learning.</p>
+  <hr>
+  <% elsif signed_in? && @user.profile.bio == nil %>
+  <h3>Hey! Why not fill out a profile and connect with other students?</h3>
+   <%= link_to "Set up profile", new_profile_path %>
+  <hr>
+  <% else %>
+  <p><%= link_to "Sign up", new_user_path %> to Study Chat and connect with your fellow learners</p>
   <hr>
 
-</div>
   <% end %>
+
+
+  <%= render @users %>
