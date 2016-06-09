@@ -2,6 +2,7 @@
 <p>Fill out the rest of your profile!</p>
 
 <%= form_for @user.profile do |f| %>
+<%= f.file_field :image %>
  <%= f.text_area :bio, placeholder: "Enter your bio..." %>
  <%= f.submit "Save!" %>
 <% end %>

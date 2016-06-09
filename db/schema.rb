@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160608064232) do
+ActiveRecord::Schema.define(version: 20160609015709) do
 
   create_table "profiles", force: :cascade do |t|
     t.text     "bio"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

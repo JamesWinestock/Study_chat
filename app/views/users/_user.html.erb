@@ -1,4 +1,7 @@
-<p><%= user.username %> joined <%= time_ago_in_words(user.created_at) + " ago" %></p>
-<p><%= user.profile.bio %></p>
+<% if user.profile.bio %>
+  <%= image_tag user.profile.image.thumb.url if user.profile.image %>
+  <%= user.username %> joined <%= time_ago_in_words(user.created_at) + " ago" %></p>
+<p><%= user.profile.bio if user.profile.bio %></p>
 <%= link_to "profile", profile_path(user) %>
 <hr>
+<% end %>
