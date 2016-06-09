@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609015709) do
+ActiveRecord::Schema.define(version: 20160609035956) do
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "address"
+    t.string   "suburb"
+    t.string   "state"
+    t.string   "country"
+    t.string   "postcode"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "locationable_type"
+    t.integer  "locationable_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["locationable_type", "locationable_id"], name: "index_locations_on_locationable_type_and_locationable_id"
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.text     "bio"

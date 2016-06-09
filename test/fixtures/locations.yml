@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyString
+  suburb: MyString
+  state: MyString
+  country: MyString
+  postcode: MyString
+  latitude: 1.5
+  longitude: 1.5
+  locationable: one
+  locationable_type: Locationable
+
+two:
+  address: MyString
+  suburb: MyString
+  state: MyString
+  country: MyString
+  postcode: MyString
+  latitude: 1.5
+  longitude: 1.5
+  locationable: two
+  locationable_type: Locationable

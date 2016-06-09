@@ -3,4 +3,12 @@
 <p>Profile picture: <%= image_tag @profile.image.medium.url %></p>
 <p>Email: <%= @user.email %></p>
 <p>About me: <%= @profile.bio %></p>
+
+<% if @profile.location %>
+  <p><%= @profile.location.address %>, <%= @profile.location.suburb %>, <%= @profile.location.state %>, <%= @profile.location.country %></p>
+
+  <% else %>
+  <p>Add a location?</p>
+  <%= link_to "add location", new_location_path(name: "profile") %>
+  <% end %>
 <%= link_to "Back", home_path %>

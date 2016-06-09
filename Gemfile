@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'monban-generators'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'pry-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
