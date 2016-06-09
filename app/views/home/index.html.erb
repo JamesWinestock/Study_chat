@@ -7,7 +7,7 @@
 
 <% @users.each do |user| %>
 <div>
-  <p>Username: <%=user.username%></p>
+  <p>Username: <%=user.username%> joined <%= time_ago_in_words(user.created_at) + ' ago'%></p>
   <p>Bio: <%= user.profile.bio %></p>
   <p><%= link_to "View User", profile_path(user) %></p>
 
