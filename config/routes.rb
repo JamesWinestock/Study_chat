@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :profiles
+
+  resources :subjects, only: [:new, :create]
   resources :locations
+  resources :profiles
   resource :session, only: [:new, :create, :destroy]
   resources :users
   get 'home/index', to: 'home#index', as: '/home'
