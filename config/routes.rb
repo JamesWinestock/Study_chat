@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-
-  resources :subjects, only: [:new, :create]
+  resources :comments, only: [:index]
+  resources :subjects, only: [:new, :create, :index, :show]
   resources :locations
   resources :profiles
   resource :session, only: [:new, :create, :destroy]

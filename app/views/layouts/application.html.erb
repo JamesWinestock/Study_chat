@@ -12,6 +12,7 @@
 
     <%= link_to "Home", home_path %>
 
+
     <% if signed_in? %>
       <%= link_to "Sign Out", session_path, method: :delete %>
       <%= link_to "Your Profile", profile_path(current_user) %>
@@ -19,6 +20,7 @@
       <%= link_to "Sign Up", new_user_path %>
       <%= link_to "Sign In", new_session_path %>
     <% end %>
+    <%= link_to "All subjects", subjects_path %>
     <%= yield %>
   </body>
 </html>

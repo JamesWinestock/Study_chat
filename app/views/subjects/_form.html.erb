@@ -1,6 +1,7 @@
 <p> Add a subject :</p>
 
 <%= form_for @subject do |f| %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, placeholder: "Subject name" %>
+  <%= f.text_area :description, placeholder: "description" %>
   <%= submit_tag "Submit", name: params[:name] %>
 <% end %>

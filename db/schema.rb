@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160610002129) do
+ActiveRecord::Schema.define(version: 20160610025342) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "address"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20160610002129) do
     t.integer  "subjectable_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "profile_id"
+    t.index ["profile_id"], name: "index_subjects_on_profile_id"
     t.index ["subjectable_type", "subjectable_id"], name: "index_subjects_on_subjectable_type_and_subjectable_id"
   end
 
