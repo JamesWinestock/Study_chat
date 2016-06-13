@@ -1,4 +1,4 @@
-class Profile::CommentsController < CommentsController
+class Profiles::CommentsController < CommentsController
   before_action :set_commentable
 
   private
