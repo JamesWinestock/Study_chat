@@ -21,4 +21,6 @@
       <%= link_to "add subjects", new_subject_path(name: "profile") %>
   <% end %>
 
+  <%= render partial: "comments/comments", locals: {commentable: @profile} %>
+  <%= render partial: "comments/form", locals: {commentable: @profile} %>
 <%= link_to "Back", home_path %>

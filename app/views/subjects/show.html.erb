@@ -2,3 +2,7 @@
 <p>This forum was created by: <%= link_to @subject.profile.user.username, profile_path(@subject.profile.user) %> <%= time_ago_in_words(@subject.created_at) + " ago"%></p>
 
 <p><%= @subject.description %></p>
+
+
+<%= render partial: "comments/comments", locals: {commentable: @subject} %>
+<%= render partial: "comments/form", locals: {commentable: @subject} %>
