@@ -4,6 +4,6 @@ class Subjects::CommentsController < CommentsController
   private
 
   def set_commentable
-    @commentable = Subject.find(params[:subject_id])
+    @commentable = Subject.find(params[:subject_id]).order(created_at: :desc).
   end
 end
