@@ -17,6 +17,7 @@ gem 'monban-generators'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
+gem 'geocoder'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
