@@ -1,3 +1,29 @@
-<p><%= location.address %></p>
-<p><%= location.longitude %></p>
-<p><%= location.latitude %></p>
+<p><%= location.full_address %></p>
+
+
+
+<div id="map">
+  <script>
+  var map;
+      var service;
+      var infowindow;
+      var myLatLng = {lat: <%= location.latitude %>, lng: <%= location.longitude %>}
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 15,
+        });
+        var marker = new google.maps.Marker({
+   position: myLatLng,
+   map: map,
+   title: 'Hello World!'
+ });
+      }
+
+</script>
+</div>
+
+
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2WS0F0KWSPoe5cIsGq4a5fUQmnSBXqQ4&callback=initMap">
+    </script>
