@@ -10,7 +10,7 @@ class LocationsController < ApplicationController
     if params[:profile]
       @profile.build_location(location_params).save
       flash[:notice] = "Success"
-      redirect_to profile_path(@user)
+      redirect_to profile_path(@profile)
     # elsif params[:teacher]
       #this is where you can add another model with another location
     else
